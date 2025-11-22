@@ -1,0 +1,745 @@
+/* ClearCast - Custom Styles */
+
+/* CSS Variables for Color Palette */
+:root {
+    --sky-blue: #87CEEB;
+    --dark-navy: #003366;
+    --sunny-yellow: #FFD700;
+    --stormy-gray: #A9A9A9;
+    --white: #FFFFFF;
+    --light-gray: #F8F9FA;
+    --text-gray: #6C757D;
+    --gradient-start: #87CEEB;
+    --gradient-end: #B0E0E6;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-navy);
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    min-height: 100vh;
+}
+
+/* Alert Bar */
+.alert-bar {
+    background: linear-gradient(90deg, var(--stormy-gray) 0%, #8B8B8B 100%);
+    color: var(--white);
+    padding: 0.75rem 0;
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 1000;
+}
+
+.alert-bar .alert-text {
+    font-weight: 500;
+}
+
+.alert-bar .alert-time {
+    opacity: 0.8;
+}
+
+/* Header */
+.header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 51, 102, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-navy) !important;
+    text-decoration: none;
+}
+
+.navbar-brand i {
+    color: var(--sunny-yellow);
+    font-size: 1.8rem;
+}
+
+.brand-text {
+    background: linear-gradient(45deg, var(--dark-navy), var(--sky-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.navbar-nav .nav-link {
+    color: var(--dark-navy) !important;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--sky-blue) !important;
+}
+
+.download-btn {
+    background: linear-gradient(45deg, var(--sunny-yellow), #FFA500) !important;
+    border: none !important;
+    color: var(--dark-navy) !important;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem !important;
+    border-radius: 25px !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+    color: var(--dark-navy) !important;
+}
+
+/* Hero Section */
+.hero {
+    padding: 2rem 0;
+    position: relative;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--dark-navy);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-gray);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.app-badges {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.app-badge {
+    transition: transform 0.3s ease;
+}
+
+.app-badge:hover {
+    transform: scale(1.05);
+}
+
+.app-badge img {
+    height: 60px;
+    width: 180px;
+    object-fit: contain;
+}
+
+/* Weather Widget */
+.weather-widget {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 40px rgba(0, 51, 102, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.widget-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--sky-blue);
+}
+
+.widget-header h3 {
+    color: var(--dark-navy);
+    font-weight: 600;
+    margin: 0;
+}
+
+.location {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+.current-weather {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.weather-icon {
+    font-size: 4rem;
+    color: var(--sky-blue);
+    margin-right: 1.5rem;
+}
+
+.weather-info {
+    flex: 1;
+}
+
+.temperature {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--dark-navy);
+    line-height: 1;
+}
+
+.condition {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    margin-bottom: 0.5rem;
+}
+
+.details {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.precipitation-chance {
+    margin-bottom: 2rem;
+}
+
+.chance-label {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    margin-bottom: 0.5rem;
+}
+
+.chance-bar {
+    background: rgba(169, 169, 169, 0.2);
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.chance-fill {
+    background: linear-gradient(90deg, var(--sky-blue), var(--stormy-gray));
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+.chance-text {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    text-align: right;
+}
+
+.hourly-forecast h4 {
+    color: var(--dark-navy);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.hourly-scroll {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+}
+
+.hourly-item {
+    min-width: 80px;
+    text-align: center;
+    padding: 1rem 0.5rem;
+    background: rgba(135, 206, 235, 0.1);
+    border-radius: 10px;
+    border: 1px solid rgba(135, 206, 235, 0.2);
+}
+
+.hourly-time {
+    font-size: 0.8rem;
+    color: var(--text-gray);
+    margin-bottom: 0.5rem;
+}
+
+.hourly-icon {
+    font-size: 1.5rem;
+    color: var(--sky-blue);
+    margin-bottom: 0.5rem;
+}
+
+.hourly-temp {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--dark-navy);
+}
+
+/* Section Styles */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-navy);
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Benefits Section */
+.benefits {
+    padding: 5rem 0;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.benefit-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(0, 51, 102, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 51, 102, 0.15);
+}
+
+.benefit-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, var(--sky-blue), var(--sunny-yellow));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.benefit-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--dark-navy);
+    margin-bottom: 1rem;
+}
+
+.benefit-card p {
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+/* Accuracy Section */
+.accuracy {
+    padding: 5rem 0;
+}
+
+.comparison-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 51, 102, 0.1);
+}
+
+.comparison-slider {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.comparison-item {
+    flex: 1;
+    text-align: center;
+}
+
+.comparison-label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--dark-navy);
+    margin-bottom: 1rem;
+}
+
+.comparison-map {
+    height: 200px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgba(135, 206, 235, 0.3);
+}
+
+.comparison-map.blurry {
+    background: linear-gradient(45deg, #E0E0E0, #F0F0F0);
+    filter: blur(2px);
+}
+
+.comparison-map.sharp {
+    background: linear-gradient(45deg, var(--sky-blue), var(--gradient-end));
+}
+
+.map-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--dark-navy);
+}
+
+.map-overlay i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.map-overlay p {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.map-overlay small {
+    color: var(--text-gray);
+}
+
+.slider-control {
+    text-align: center;
+}
+
+.slider-control input[type="range"] {
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--stormy-gray), var(--sky-blue));
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.slider-control input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--sunny-yellow);
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(255, 215, 0, 0.4);
+}
+
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-gray);
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 5rem 0;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0, 51, 102, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-3px);
+}
+
+.testimonial-content {
+    margin-bottom: 2rem;
+}
+
+.testimonial-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--dark-navy);
+    font-style: italic;
+    position: relative;
+}
+
+.testimonial-content p::before {
+    content: '"';
+    font-size: 3rem;
+    color: var(--sky-blue);
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    font-family: serif;
+}
+
+.author-info h4 {
+    color: var(--dark-navy);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.author-info span {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+/* Premium Section */
+.premium {
+    padding: 5rem 0;
+}
+
+.premium-features {
+    margin: 3rem 0;
+}
+
+.premium-feature {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.premium-feature i {
+    font-size: 3rem;
+    color: var(--sunny-yellow);
+    margin-bottom: 1rem;
+}
+
+.premium-feature h4 {
+    color: var(--dark-navy);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.premium-feature p {
+    color: var(--text-gray);
+}
+
+.premium-cta {
+    margin-top: 3rem;
+}
+
+.btn-warning {
+    background: linear-gradient(45deg, var(--sunny-yellow), #FFA500) !important;
+    border: none !important;
+    color: var(--dark-navy) !important;
+    font-weight: 600;
+    padding: 1rem 3rem !important;
+    border-radius: 50px !important;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-warning:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+    color: var(--dark-navy) !important;
+}
+
+.premium-note {
+    margin-top: 1rem;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+/* Footer */
+.footer {
+    background: var(--dark-navy);
+    color: var(--white);
+    padding: 3rem 0 1rem;
+}
+
+.footer-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.footer-brand i {
+    color: var(--sunny-yellow);
+    font-size: 1.8rem;
+}
+
+.footer-description {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.footer h5 {
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--sky-blue);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--sky-blue);
+    transform: translateY(-2px);
+    color: var(--white);
+}
+
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.2);
+    margin: 2rem 0 1rem;
+}
+
+.copyright, .developer {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.developer a {
+    color: var(--sky-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.developer a:hover {
+    color: var(--sunny-yellow);
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .app-badges {
+        justify-content: center;
+    }
+    
+    .weather-widget {
+        margin-top: 2rem;
+        padding: 1.5rem;
+    }
+    
+    .temperature {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .comparison-slider {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .comparison-map {
+        height: 150px;
+    }
+    
+    .benefit-card, .testimonial-card {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .weather-widget {
+        padding: 1rem;
+    }
+    
+    .current-weather {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .weather-icon {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .app-badge img {
+        height: 50px;
+    }
+    
+    .comparison-container {
+        padding: 2rem 1rem;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--sky-blue);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-navy);
+}
