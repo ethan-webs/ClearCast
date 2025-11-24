@@ -174,7 +174,5 @@ For professional use, commercial deployment, or custom modifications, please vis
 - Access advanced features and customizations
 - Receive professional support and maintenance
 
----
-
 **Developed by RiverTheme** - Professional web development and design services.
 
